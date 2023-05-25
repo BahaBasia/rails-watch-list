@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.banner {
+  background-size: cover;
+  background-position: top;
+  padding: 150px 0;
+}
+.banner h1 {
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 3px;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0px;
+}

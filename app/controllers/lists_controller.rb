@@ -37,6 +37,6 @@ class ListsController < ApplicationController
   end
 
   def list_params
-    arams.require(:list).permit(:name)
+    params.require(:list).permit(:name)
   end
 end

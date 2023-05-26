@@ -5,3 +5,18 @@ a {
   text-decoration: none;
   color: $white;
 }
+
+.show-page-cont {
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+}
+
+.add-bookmark-form-cont {
+  display: flex;
+}
+
+.show-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}

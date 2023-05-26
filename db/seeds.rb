@@ -15,12 +15,12 @@
 
 response = URI.open("https://tmdb.lewagon.com/movie/top_rated")
 json = JSON.parse(response.read)
-
+puts json
 
 
 puts " cleaning database in progress..."
 #all the tables data can be created within this
-#Bookmark.destroy_all
+Bookmark.destroy_all
 List.destroy_all
 Movie.destroy_all
 
@@ -31,7 +31,7 @@ json['results'].each do |entry|
     title: entry['title'],
     overview: entry['overview'],
     rating: entry['vote_average'],
-    # poster_url: "https://image.tmdb.org/t/p/original#{movie['backdrop_path']}",
+    poster_url: entry['backdrop_path']
   )
   puts "Created #{movie.title}"
 end
@@ -43,7 +43,3 @@ List.create(name: "horror")
 
 
 puts "Finished!"
-
-
-
-    # in the hash : poster_url: "https://image.tmdb.org/t/p/original#{movie['backdrop_path']}"

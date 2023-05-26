@@ -3,7 +3,6 @@ class BookmarksController < ApplicationController
   before_action :get_list, only: [ :new, :create ]
   before_action :get_bookmark, only: :destroy
 
-
   def new
     @bookmark = Bookmark.new
   end
@@ -23,7 +22,7 @@ end
 
 private
 
-def
+def get_list
   @list = List.find(params[:list_id])
 end
 
